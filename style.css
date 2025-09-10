@@ -55,7 +55,7 @@ nav{
     display: inline-block;
 }
 nav a {
-    color : white ;
+    color : white !important;
     margin : 0 15px ;
     text-decoration: none;
     transition : color 0.3s ease;
