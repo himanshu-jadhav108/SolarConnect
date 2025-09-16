@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SolarConnect</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+        <div id="main-content">
+            <header>
+                <h1>SolarConnect</h1>
+                <p>Let The Sun Power Your Life</p>
+                <div id="google_translate_element"></div>
+            </header>
+            <nav id="main-nav">
+                <a href="#benefits">Benefits</a>
+                <a href="#calculators">Calculators</a>
+                <a href="#subsidy">Subsidies</a>
+                <a href="#success-stories">Success Stories</a>
+                <a href="#register">Register</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+        <section id="hero" class="hero-section">
+        <div class="hero-content" data-aos="fade-down" data-aos-duration="1000">
+            <h1>Welcome to SolarConnect</h1>
+            <h2>Empowering Communities with Clean & Sustainable Solar Energy</h2>
+                <p>SolarConnect is your gateway to clean, renewable energy. Discover subsidies, success stories, and take the first step towards a sustainable future.</p>
+                <p>Empowering Communities with Clean & Sustainable Solar Energy 🌞</p>
+                <p>Join us in making a difference by harnessing the power of the sun for a brighter, greener future.</p>
+                <p>Get free consultations, explore government subsidies, and learn how solar energy can transform
+                <a href="#benefits" class="hero-btn">Get Started</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/solar_connect.jpg" alt="Solar Connect Logo" />
+        </div>
+        </section>
+        <div class="container">
+        <section id="benefits"  data-aos="fade-up" data-aos-duration="1000">
+            <h2>Why Choose Solar Energy?</h2>
+            <p>Solar Power helps reduce electricity bills , is eco-friendly, and works even during power cuts. It's a long-term investment for a cleaner future.</p>
+            <img src="images/village_solar4.jpg" alt="Solar panels in a village setting" class="solar-img" />
+            <img src="images/solar_energy.png" alt="Solar panel on a rooftop" class="solar-img" />
+            <img src="images/village_solar3.jpg" alt="Solar panels in a village setting" class="solar-img" />
+            <ul class="benefits-list">
+                <li>Renewable Energy Source</li>
+                <li>Reduces Electrity Bills</li>
+                <li>Environmentally Friendly</li>
+                <li>Low Maintanance Costs</li>
+                <li>Increases Property Value</li>
+                <li>Energy Independence</li>
+                <li>Job Creation</li>           
+            </ul>
+        </section>
+        <section id="calculators"  data-aos="fade-up" data-aos-duration="1000">
+            <h2>Solar Savings Calculators</h2>
+            <p>Enter your monthly electricity bill(Rs.) : </p>
+            <input type="number" id="billInput" placeholder="e.g. 1000" />
+            <button onclick="calculateSavings()">Calculate</button>
+            <p id="result"></p>
+        </section>
+
+        <section id="subsidy" data-aos="fade-up" data-aos-duration="1000">
+        <h2>Government & Private Subsidy Info</h2>
+            <p>
+            The Indian Government and various private entities offer subsidies to promote solar adoption. Find out what’s available in your region and apply easily.
+            </p>
+            <p>SolarConnect helps you navigate through the complex subsidy landscape, ensuring you get the maximum benefits available.</p>
+            <p>Check out the latest government schemes and private subsidies to make solar energy affordable for everyone. From farmers to urban households, there are options for all.</p>
+            <p>The Government of India, along with various state bodies and private firms, offers attractive subsidies and financial support to promote solar usage. Explore schemes tailored to farmers, residential users, and industrial setups.</p>
+            <p>Whether you are a farmer looking to power your irrigation pumps or a homeowner wanting to reduce your electricity bills, there are schemes available to help you.</p>
+        <img src="images/subsidy.jpg" alt="Government subsidy for solar energy" class="solar-img" />
+        <section id="gov-schemes" class="schemes-section">
+        <h2>Available Solar Subsidies</h2>
+            <div class="schemes-container">
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s8.jpg" alt="Solar Panel Icon" />
+                    </div>
+                        <h3>☀️ PM-KUSUM Yojana</h3>
+                            <p>Subsidy for farmers to install solar irrigation pumps. <br><strong>Available:</strong> PAN India</p>
+                        <a href="https://pmkusum.mnre.gov.in/#/landing" target="_blank">Go to Portal</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s2.jpg" alt="Rooftop Solar Icon" />
+                    </div>
+                        <h3>🏠 Rooftop Solar Scheme</h3>
+                            <p>Install rooftop panels with up to 40% subsidy. <br><strong>Available:</strong> All residential areas (India)</p>
+                        <a href="https://pmsuryaghar.gov.in/" target="_blank">Apply Now</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s3.jpg" alt="Solar Farm Icon" />
+                    </div>
+                        <h3>🌞 Solar Park Scheme</h3>
+                            <p>Subsidy for developers building solar parks. <br><strong>Available:</strong> Rajasthan, Gujarat, MP</p>
+                        <a href="https://www.mnre.gov.in/" target="_blank">Learn More</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s4.jpg" alt="State Icon" />
+                    </div>
+                        <h3>🌄 Maha Solar Subsidy</h3>
+                            <p>Extra 10% subsidy for rooftop systems. <br><strong>Available:</strong> Maharashtra</p>
+                        <a href="https://mahadiscom.in/" target="_blank">Apply on Mahadiscom</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s6.jpg" alt="Gujarat Icon" />
+                    </div>
+                        <h3>🌿 Surya Gujarat Scheme</h3>
+                            <p>Up to ₹40,000 subsidy for rooftop solar. <br><strong>Available:</strong> Gujarat</p>
+                        <a href="https://www.suryagujarat.guvnl.in/" target="_blank">Official Website</a>
+                </div>
+
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s1.jpg" alt="Tamil Nadu Icon" />
+                    </div>
+                        <h3>🌞 Tamil Nadu Solar Subsidy</h3>
+                            <p>Up to ₹20,000 subsidy for residential systems. <br><strong>Available:</strong> Tamil Nadu</p>
+                        <a href="https://www.tnebltd.gov.in/usrp/" target="_blank">Visit TANGEDCO</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s12.jpg" alt="Karnataka Icon" />
+                    </div>
+                        <h3>🌞 Karnataka Solar Subsidy</h3>
+                            <p>Up to ₹30,000 subsidy for residential systems. <br><strong>Available:</strong> Karnataka</p>
+                        <a href="https://kspdcl.karnataka.gov.in/" target="_blank">Visit BESCOM</a>
+                </div>        
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s2.jpg" alt="Telangana Icon" />
+                    </div>
+                        <h3>🌞 Telangana Solar Subsidy</h3>
+                            <p>Up to ₹25,000 subsidy for residential systems. <br><strong>Available:</strong> Telangana</p>
+                        <a href="https://tgredco.telangana.gov.in/Solar_Rooftop_plants_subsidy_payments.aspx" target="_blank">Visit TSREDCO</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s9.jpg" alt="Andhra Pradesh Icon" />
+                    </div>
+                        <h3>🌞 Andhra Pradesh Solar Subsidy</h3>
+                            <p>Up to ₹20,000 subsidy for residential systems. <br><strong>Available:</strong> Andhra Pradesh</p>
+                        <a href="https://apspdcl.in/" target="_blank">Visit APSPDCL</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s10.jpg" alt="Tata Icon" />
+                    </div>
+                        <h3>⚡ Tata Power Solar EMI</h3>
+                            <p>Private loan+subsidy support for home solar. <br><strong>Available:</strong> Delhi, Mumbai, Pune</p>
+                        <a href="https://www.tatapowersolar.com/" target="_blank">Know More</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s11.jpg" alt="Money Icon" />
+                    </div>
+                        <h3>💼 IREDA Green Finance</h3>
+                            <p>Loans & grants for large solar projects. <br><strong>Available:</strong> PAN India (Industrial)</p>
+                        <a href="https://www.ireda.in/" target="_blank">Visit IREDA</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="icon-container">
+                    <img src="/images/logos/s13.jpg" alt="Local Icon" />
+                    </div>
+                        <h3>🏛️ Local Urban Schemes</h3>
+                            <p>Ward-level and city-based subsidies. <br><strong>Available:</strong> Bhopal, Hyderabad, Nagpur, Kochi</p>
+                        <a href="https://smartcities.gov.in/" target="_blank">Smart Cities Portal</a>
+                </div>
+            </div>
+        </section>
+        </section>
+        <section id="success-stories" class="content-section">
+        <div class="container">
+            <h2>🌞 Success Stories</h2>
+                <div class="story-card">
+                    <img src="images/meera.jpg" alt="Meera Joshi" class="story-img">
+                    <h3>1. Meera Joshi – Pune, Maharashtra</h3>
+                    <p>
+                        "I installed solar panels through SolarConnect last year. Not only did I save over ₹15,000 annually on my electricity bill, but I also got a 40% subsidy from the government. The team helped me with everything from calculating my needs to installing the system flawlessly!"
+                    </p>
+                </div>
+                <div class="story-card">
+                    <img src="images/ravi.jpg" alt="Ravi Sharma" class="story-img">
+                    <h3>2. Ravi Sharma – Nashik, Maharashtra</h3>
+                    <p>
+                        "SolarConnect made the entire process so easy! I was able to install solar panels on my farm with a 50% subsidy. Now, my irrigation system runs on solar power, and I’ve reduced my diesel costs significantly. Plus, I’m contributing to a greener planet!"
+                    </p>
+                </div>
+                <div class="story-card">
+                    <img src="images/smita.jpg" alt="Smita Patil" class="story-img">
+                    <h3>3. Smita Patil – Aurangabad, Maharashtra</h3>
+                    <p>
+                        "SolarConnect guided me at every step – from applying for subsidies to installation. It feels great to contribute to clean energy and also save on bills. I now promote solar energy in my community thanks to this experience!"
+                    </p>
+                </div>
+                <div class="story-card">
+                    <img src="images/anita_devi.jpg" alt="Anita Devi" class="story-img">
+                    <h3>4. Anita Devi – Bihar</h3>
+                    <p>
+                        “After installing solar panels, we saved ₹1200 monthly. Now, our village is slowly shifting to solar too!”
+                    </p>
+                </div>
+                <div class="story-card">
+                    <img src="images/rahul_sharma.jpg" alt="Rahul Sharma" class="story-img">
+                    <h3>5. Rahul Sharma – Rajasthan</h3>
+                    <p>
+                        “Our farm irrigation runs entirely on solar power thanks to PM-KUSUM. No more diesel!”
+                    </p>
+                </div>
+                <div class="story-card">
+                    <img src="images/maya_builders.jpg" alt="Maya Builders" class="story-img">
+                    <h3>6. Maya Builders – Pune, Maharashtra</h3>
+                    <p>
+                        "We installed rooftop solar panels in our residential complex. The subsidy made it affordable, and now we power common areas with clean energy. Residents are happy with reduced bills and a greener environment!"
+                    </p>
+                </div>                
+        </div>
+        </section>
+        <section id="register" class="form-section"  data-aos="fade-up" data-aos-duration="1000">
+            <h2>Register for Free Solar Consultation => "Get Solar Guidance – Register Now!"</h2>
+            <p>Fill out the form below to get a free consultation from our solar experts.</p>
+            <p>Want to know your subsidy eligibility? Get personalized support, installation guidance, and documentation help by registering with us. It’s free and takes just 1 minute!</p>
+            <form id="registrationForm" onsubmit="registerUser(event)">
+                <input type="text" id="name" placeholder="Full Name" required />
+                <input type="number" id="income" placeholder="Annual Income (Rs.)" required />
+                <input type="text" id="city" placeholder="Location/City" required />
+                <input type="text" id="state" placeholder="State" required />
+                <input type="number" id="number" placeholder="Phone Number" required />
+                <input type="email" id="email" placeholder="Email Address" required />
+                <button type="submit">Submit</button>
+           </form>
+            <p id="formResponse" style="color : green ; font-weight : bold ;"></p>
+        </section>
+        <section id="contact" class="contact-section" data-aos="fade-up" data-aos-duration="1000">
+            <h2>📬 Contact Us</h2>
+            <p>Have questions or want to know more? Reach out to us anytime!</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p><strong>📧 Email:</strong> <a href="mailto:solarconnect.in@gmail.com">solarconnect.in@gmail.com</a></p>
+                    <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+                    <p><strong>📍 Location:</strong> Pune, Maharashtra, India</p>
+                        <div class="social-links">
+                            <a href="#" target="_blank">🌐 Website</a> |
+                            <a href="#" target="_blank">📘 Facebook</a> |
+                            <a href="#" target="_blank">📸 Instagram</a>
+                        </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required />
+                        <input type="email" placeholder="Your Email" required />
+                        <textarea rows="4" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                        <p id="formMessage" style="color: green; font-weight: bold; display: none; margin-top: 10px;"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 SolarConnect | Design for Community Impact | By HJ</p>
+        <p>Contact us at: <a href="mailto:contact@solarconnect.in">SolarConnect🌞</a></p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com/solarconnect" target="_blank">Facebook</a> |
+            <a href="https://www.twitter.com/solarconnect" target="_blank">Twitter</a> |
+            <a href="https://www.instagram.com/solarconnect" target="_blank">Instagram</a>
+        </p>
+        <p>Privacy Policy | Terms of Service</p>
+        <p>Powered by SolarConnect🌞 Team</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="chatbot.js"></script> 
+        <script>
+            AOS.init();
+            // Show language select overlay and nav on load
+            document.getElementById('language-select').style.display = 'block';
+            document.getElementById('main-content').style.display = 'none';
+            // Clone nav into language-select for visibility
+            if (!document.getElementById('language-select-nav')) {
+                const navClone = document.getElementById('main-nav').cloneNode(true);
+                navClone.id = 'language-select-nav';
+                document.getElementById('language-select').appendChild(navClone);
+            }
+            function setLanguage(lang) {
+                document.documentElement.lang = lang;
+                document.getElementById('language-select').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        </script>
+</body>    
+</html>

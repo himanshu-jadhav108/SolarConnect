@@ -1,0 +1,673 @@
+/*
+ * SolarConnect Stylesheet
+ * Optimized for readability, maintainability, and performance.
+ */
+
+/* --- CSS Custom Properties (Variables) --- */
+:root {
+    --color-primary: #f9d342;
+    --color-secondary: #ffc107;
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --color-background-light: #fff;
+    --color-background-pale: #fffde4;
+    --color-background-yellow-gradient: linear-gradient(to right, #fffde4, #f9f871);
+    --color-background-off-white: #f9f9f9;
+    --color-border-grey: #ccc;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-accent: #ffa500;
+    --font-primary: 'Segoe UI', Arial, sans-serif;
+}
+
+/* --- Global Styles & Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    color: var(--color-text-dark);
+    text-decoration: none;
+}
+
+body {
+    background: var(--color-background-yellow-gradient);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevents horizontal scrollbar */
+    text-align: center;
+    cursor: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--color-primary);
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    margin-bottom: 20px;
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: var(--color-text-dark);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    position:relative;
+    z-index: 100;
+}
+nav, #main-nav, #language-select nav, #language-select-nav,
+nav * , #main-nav * , #language-select nav * , #language-select-nav * {
+    color: #fff !important;
+    background-color: var(--color-text-dark) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    text-shadow: 0 1px 2px #0006 !important;
+}
+nav a, #main-nav a, #language-select nav a, #language-select-nav a,
+nav a * , #main-nav a * , #language-select nav a * , #language-select-nav a * {
+    color: #fff !important;
+    background: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    text-shadow: 0 1px 2px #0006 !important;
+}
+
+/* Google Translate injected classes fix for nav */
+.goog-te-banner-frame, .goog-te-menu-value, .goog-te-gadget-simple, .goog-te-combo {
+    color: #333 !important;
+}
+.goog-te-menu-frame nav, .goog-te-menu-frame #main-nav, .goog-te-menu-frame #language-select-nav {
+    color: #fff !important;
+}
+/* Force nav and links to white even if Google Translate injects inline styles */
+nav[style], #main-nav[style], #language-select nav[style], #language-select-nav[style],
+nav a[style], #main-nav a[style], #language-select nav a[style], #language-select-nav a[style] {
+    color: #fff !important;
+    background-color: var(--color-text-dark) !important;
+    text-shadow: 0 1px 2px #0006 !important;
+}
+/* Google Translate injected classes fix for nav */
+.goog-te-banner-frame, .goog-te-menu-value, .goog-te-gadget-simple, .goog-te-combo {
+    color: #333 !important;
+}
+.goog-te-menu-frame nav, .goog-te-menu-frame #main-nav, .goog-te-menu-frame #language-select-nav {
+    color: #fff !important;
+}
+
+nav a {
+    color: var(--color-text-light);
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+/* --- Layout Containers --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: var(--color-background-light);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #e0e0e0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+section {
+    margin-bottom: 40px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #444;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+section p {
+    font-size: 1.2em;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    background-color: var(--color-background-light);
+    border-bottom: 2px solid #eee;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    color: #444;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--color-text-dark);
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #e6a700;
+}
+
+.hero-image img {
+    max-width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 12px var(--color-shadow);
+}
+
+/* --- Benefit & Image Styling --- */
+.solar-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.solar-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-list li {
+    background: var(--color-background-light);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    width: 100%;
+}
+
+.benefit-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Calculator Section --- */
+#calculators input,
+#calculators button {
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--color-border-grey);
+    border-radius: 5px;
+    display: block;
+}
+
+#calculators input {
+    font-size: 1em;
+}
+
+#calculators button {
+    background-color: var(--color-primary);
+    color: var(--color-text-dark);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+#calculators button:hover {
+    background-color: #f9c32f;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff9e6;
+    border-left: 5px solid gold;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    border-radius: 8px;
+}
+
+/* --- Subsidy Section --- */
+.schemes-section {
+    padding: 40px 20px;
+    background-color: var(--color-background-off-white);
+    text-align: center;
+}
+
+.schemes-section h2 {
+    font-size: 2.2rem;
+    color: #e69a00;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    border-bottom: none; /* Removed duplicate border */
+    margin-bottom: 30px;
+}
+
+.schemes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.scheme-card {
+    background: var(--color-background-light);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px var(--color-shadow);
+    width: 280px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.scheme-card h3 {
+    font-size: 1.3rem;
+    color: #007B5E;
+    margin-bottom: 10px;
+}
+
+.scheme-card p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.scheme-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--color-text-light);
+    background-color: var(--color-accent);
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.scheme-card a:hover {
+    background-color: #e67e22;
+}
+
+.icon-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.icon-container img {
+    width: 64px;
+    height: 64px;
+    filter: brightness(0) saturate(100%) invert(77%) sepia(64%) saturate(546%) hue-rotate(1deg) brightness(96%) contrast(89%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.scheme-card:hover .icon-container img {
+    transform: scale(1.1);
+    filter: brightness(1.1) contrast(1.2);
+}
+
+/* --- Success Stories Section --- */
+#success-stories {
+    background-color: #fff8e1;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#success-stories h2 {
+    color: #f9a825;
+    font-size: 32px;
+    margin-bottom: 30px;
+    border-bottom: none;
+}
+
+.story-card {
+    background-color: var(--color-background-light);
+    border: 1px solid #fbc02d;
+    border-left: 8px solid #fbc02d;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 700px;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    text-align: left;
+}
+
+.story-card h3 {
+    color: #f57f17;
+    margin-bottom: 10px;
+}
+
+.story-card p {
+    color: var(--color-text-dark);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.story-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fbc02d;
+    margin-bottom: 15px;
+}
+
+/* --- Registration Form Section --- */
+.form-section {
+    text-align: center;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-section input,
+.form-section button {
+    display: block;
+    margin: 10px 0;
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--color-border-grey);
+    border-radius: 5px;
+}
+
+.form-section input {
+    font-size: 1em;
+}
+
+.form-section button {
+    background-color: var(--color-primary);
+    color: var(--color-text-dark);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+    background-color: #f9c32f;
+}
+
+.form-section p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background-color: var(--color-background-off-white);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid var(--color-accent);
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact-info,
+.contact-form {
+    width: 300px;
+    max-width: 100%;
+    margin: 10px;
+    text-align: left;
+}
+
+.contact-info p,
+.contact-info a {
+    font-size: 16px;
+    color: var(--color-text-dark);
+    margin: 8px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    margin: 0 8px;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e69500;
+}
+
+/* --- Footer --- */
+footer, footer *, footer[style], footer a[style], footer p[style] {
+    background-color: #262525 !important;
+    color: #fff !important;
+    text-align: center !important;
+    padding: 15px !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+    box-shadow: 0 -2px 10px var(--color-shadow) !important;
+    text-shadow: 0 1px 2px #0006 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Utility Classes --- */
+.hidden {
+    display: none;
+}
+
+.sr-only { /* A class for screen-reader-only content */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* --- Language Selection Screen --- */
+/* Language select overlay with nav visible */
+#language-select {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 9999;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    color: var(--color-text-dark);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#language-select nav {
+    margin-top: 30px;
+    display: block;
+    z-index: 10000;
+}
+
+#language-select h2 {
+    margin-bottom: 20px;
+}
+
+#language-select button {
+    margin: 10px;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background: #28a745;
+    color: var(--color-text-light);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+#language-select button:hover {
+    background: #218838;
+}
+
+/* --- Google Translate and Chatbot (No changes) --- */
+#google_translate_element {
+    margin: 20px;
+    text-align: center;
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* --- Chatbot (Styles remain as is, they look fine) --- */
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .hero-section {
+        flex-direction: column;
+        padding: 30px 5%;
+        text-align: center;
+    }
+    .hero-content {
+        margin-bottom: 20px;
+    }
+    .hero-image img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .schemes-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .story-card {
+        padding: 15px;
+    }
+    .solar-img {
+        max-width: 100%;
+        margin: 8px 0;
+    }
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
