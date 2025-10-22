@@ -84,8 +84,19 @@ SolarConnect/
 ## 📸 Screenshots
 
 ### 🖥️ Website Preview
-![SolarConnect Website Screenshot](images/preview.png)
+![SolarConnect Website Screenshot](images/Screenshots/preview.png)
 
+### Registration Form 
+![SolarConnect Registartion Form Screenshot]
+
+### Nika ChatBot
+![Nika ChatBot Screenshot](images/Screenshots/nika.png)
+
+### Subsidy Section
+![Subsidy Section Screenshot](images/Screenshots/subsidies.png)
+
+### Solar Calculator 
+![Solar Calculator Screenshot](images/Screenshots/calculator.png)
 
 
 ---
