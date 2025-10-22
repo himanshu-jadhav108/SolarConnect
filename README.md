@@ -87,7 +87,7 @@ SolarConnect/
 ![SolarConnect Website Screenshot](images/Screenshots/preview.png)
 
 ### Registration Form 
-![SolarConnect Registartion Form Screenshot]
+![SolarConnect Registartion Form Screenshot](images/Screenshots/form.png)
 
 ### Nika ChatBot
 ![Nika ChatBot Screenshot](images/Screenshots/nika.png)

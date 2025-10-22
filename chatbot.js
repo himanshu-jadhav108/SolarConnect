@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "installation process": "Contact a verified vendor or reach out through our site for guidance.",
     "who are you": "I’m Nika Bot! Ask me anything solar-related!",
     "what can you do": "I can help you with info on subsidies, calculators, application processes, and more!",
-    "what does nika mean": "Nika means 'Sun God' in ancient mythology, symbolizing energy and light!"
+    "what does nika mean": "Nika means 'Sun God' in ancient mythology, symbolizing energy and light!",
+    "thank you": "You're welcome! Happy to help with your solar journey!",
   };
 
   const dynamicResponses = [
