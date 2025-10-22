@@ -2,15 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const chatbotContainer = document.createElement("div");
   chatbotContainer.id = "chatbot-container";
   chatbotContainer.innerHTML = `
-    <div id="nika-icon" style="position: fixed; bottom: 20px; right: 20px; cursor: pointer;">
-      <img src="images/sun_god_nika.jpg" alt="Nika Bot Icon" style="width: 60px; height: 60px; border-radius: 50%;">
+    <div id="nika-icon">
+      <img src="images/sun_god_nika.jpg" alt="Nika Bot Icon">
     </div>
-    <div id="chatbox" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 300px; background: white; border-radius: 10px; box-shadow: 0 0 15px gold; overflow: hidden; z-index: 10000;">
-      <div style="background: gold; color: black; padding: 10px; font-weight: bold; text-align:center;">☀️ Nika Bot</div>
-      <div id="chatlog" style="padding: 10px; height: 200px; overflow-y: auto; background: #fff9e6;"></div>
-      <div style="display:flex; border-top:1px solid #ddd;">
-        <input type="text" id="user-input" list="nika-suggestions" placeholder="Ask me about SolarConnect..." style="flex:1; padding:8px; border:none;">
-        <button id="nika-send" style="background:gold; color:black; border:none; padding:8px 12px; cursor:pointer; font-weight:bold;">Send</button>
+    <div id="chatbox">
+      <div class="chat-header">☀️ Nika Bot</div>
+      <div id="chatlog"></div>
+      <div class="chat-input-row">
+        <input type="text" id="user-input" list="nika-suggestions" placeholder="Ask me about SolarConnect...">
+        <button id="nika-send">Send</button>
       </div>
     </div>
   `;
@@ -25,7 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
     "how to use calculator": "Go to the Solar Calculator section, input your bill amount, and see potential savings.",
     "subsidy in maharashtra": "Visit the 'Government Schemes' section or go to https://solarrooftop.gov.in for details.",
     "how to apply for subsidy": "Check our subsidy section and follow portal links to apply with basic KYC documents.",
-    "contact us": "Use the Contact form or reach us at solarconnect.help@gmail.com."
+    "contact us": "Use the Contact form or reach us at solarconnect.help@gmail.com.",
+    "benefits of solar": "Solar saves money, reduces carbon footprint, and offers government subsidies!",
+    "installation process": "Contact a verified vendor or reach out through our site for guidance.",
+    "who are you": "I’m Nika Bot! Ask me anything solar-related!",
+    "what can you do": "I can help you with info on subsidies, calculators, application processes, and more!",
+    "what does nika mean": "Nika means 'Sun God' in ancient mythology, symbolizing energy and light!"
   };
 
   const dynamicResponses = [
@@ -35,7 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
     { keywords: ["contact", "help", "support"], reply: "📧 Email us at solarconnect.help@gmail.com or use our Contact form." },
     { keywords: ["benefits", "advantages", "why solar"], reply: "⚡ Solar lowers bills, supports the environment, and unlocks subsidies!" },
     { keywords: ["installation", "how to install", "process"], reply: "🔧 Contact a verified vendor or reach out through our site for guidance." },
-    { keywords: ["nika", "bot", "who are you", "hello", "hi", "hey", "what can you do"], reply: "🌞 I’m Nika Bot! Ask me anything solar-related!" }
+    { keywords: ["nika", "bot", "who are you", "hello", "hi", "hey", "what can you do"], reply: "🌞 I’m Nika Bot! Ask me anything solar-related!" },
+    { keywords: ["meaning of nika", "what does nika mean"], reply: "☀️ Nika means 'Sun God' in ancient mythology, symbolizing energy and light!" },
+    { keywords: ["thank you", "thanks"], reply: "😊 You're welcome! Happy to help with your solar journey!" },
+    { keywords: ["hello", "hi", "hey"], reply: "👋 Hello! How can I assist you with solar energy today?" },
+    { keywords: ["goodbye", "bye", "see you"], reply: "👋 Goodbye! Feel free to chat with me anytime for solar info!" },
+    { keywords: ["pricing", "cost", "how much"], reply: "💰 Solar system costs vary by size and location. Use our calculator for estimates!" },
+    { keywords: ["hours", "when are you open", "working hours"], reply: "⏰ We're available 24/7 online to assist you with solar information!" },
+    { keywords: ["location", "where are you located", "address"], reply: "📍 We're an online platform, accessible from anywhere!" },
+    { keywords: ["environment", "climate change", "green energy"], reply: "🌍 Solar energy reduces carbon footprint and combats climate change!" },
+    { keywords: ["register","registration"], reply: "📝 To register, please fill out the registration form on our website with your details." }
   ];
 
   const suggestQuestions = Object.keys(responses);

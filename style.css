@@ -1,9 +1,3 @@
-/*
- * SolarConnect Stylesheet
- * Optimized for readability, maintainability, and performance.
- */
-
-/* --- CSS Custom Properties (Variables) --- */
 :root {
     --color-primary: #f9d342;
     --color-secondary: #ffc107;
@@ -40,7 +34,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    overflow-x: hidden; /* Prevents horizontal scrollbar */
+    overflow-x: hidden;
     text-align: center;
     cursor: auto;
 }
@@ -80,16 +74,16 @@ nav {
     position:relative;
     z-index: 100;
 }
-nav, #main-nav, #language-select nav, #language-select-nav,
-nav * , #main-nav * , #language-select nav * , #language-select-nav * {
+nav, #main-nav,
+nav * , #main-nav * {
     color: #fff !important;
     background-color: var(--color-text-dark) !important;
     opacity: 1 !important;
     visibility: visible !important;
     text-shadow: 0 1px 2px #0006 !important;
 }
-nav a, #main-nav a, #language-select nav a, #language-select-nav a,
-nav a * , #main-nav a * , #language-select nav a * , #language-select-nav a * {
+nav a, #main-nav a,
+nav a * , #main-nav a * {
     color: #fff !important;
     background: none !important;
     opacity: 1 !important;
@@ -97,25 +91,23 @@ nav a * , #main-nav a * , #language-select nav a * , #language-select-nav a * {
     text-shadow: 0 1px 2px #0006 !important;
 }
 
-/* Google Translate injected classes fix for nav */
+/* Google Translate */
 .goog-te-banner-frame, .goog-te-menu-value, .goog-te-gadget-simple, .goog-te-combo {
     color: #333 !important;
 }
-.goog-te-menu-frame nav, .goog-te-menu-frame #main-nav, .goog-te-menu-frame #language-select-nav {
+.goog-te-menu-frame nav, .goog-te-menu-frame #main-nav {
     color: #fff !important;
 }
-/* Force nav and links to white even if Google Translate injects inline styles */
-nav[style], #main-nav[style], #language-select nav[style], #language-select-nav[style],
-nav a[style], #main-nav a[style], #language-select nav a[style], #language-select-nav a[style] {
+nav[style], #main-nav[style],
+nav a[style], #main-nav a[style] {
     color: #fff !important;
     background-color: var(--color-text-dark) !important;
     text-shadow: 0 1px 2px #0006 !important;
 }
-/* Google Translate injected classes fix for nav */
 .goog-te-banner-frame, .goog-te-menu-value, .goog-te-gadget-simple, .goog-te-combo {
     color: #333 !important;
 }
-.goog-te-menu-frame nav, .goog-te-menu-frame #main-nav, .goog-te-menu-frame #language-select-nav {
+.goog-te-menu-frame nav, .goog-te-menu-frame #main-nav {
     color: #fff !important;
 }
 
@@ -225,7 +217,7 @@ section p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.benefit-list {
+.benefits-list {
     list-style-type: none;
     padding: 0;
     margin: 20px auto;
@@ -298,7 +290,7 @@ section p {
     font-size: 2.2rem;
     color: #e69a00;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    border-bottom: none; /* Removed duplicate border */
+    border-bottom: none;
     margin-bottom: 30px;
 }
 
@@ -522,16 +514,29 @@ section p {
 
 /* --- Footer --- */
 footer, footer *, footer[style], footer a[style], footer p[style] {
-    background-color: #262525 !important;
-    color: #fff !important;
-    text-align: center !important;
-    padding: 15px !important;
-    width: 100% !important;
-    margin-top: 20px !important;
-    box-shadow: 0 -2px 10px var(--color-shadow) !important;
-    text-shadow: 0 1px 2px #0006 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+    background-color: #262525;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 -2px 10px var(--color-shadow);
+    text-shadow: 0 1px 2px #0006;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* form message */
+#formResponse {
+    color: green;
+    font-weight: bold;
+}
+
+#formMessage {
+    color: green;
+    font-weight: bold;
+    display: none;
+    margin-top: 10px;
 }
 
 /* --- Animations --- */
@@ -571,7 +576,7 @@ footer, footer *, footer[style], footer a[style], footer p[style] {
     display: none;
 }
 
-.sr-only { /* A class for screen-reader-only content */
+.sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -582,53 +587,7 @@ footer, footer *, footer[style], footer a[style], footer p[style] {
     border: 0;
 }
 
-/* --- Language Selection Screen --- */
-/* Language select overlay with nav visible */
-#language-select {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #f7f7f7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    z-index: 9999;
-    font-family: var(--font-primary);
-    font-size: 18px;
-    color: var(--color-text-dark);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-#language-select nav {
-    margin-top: 30px;
-    display: block;
-    z-index: 10000;
-}
-
-#language-select h2 {
-    margin-bottom: 20px;
-}
-
-#language-select button {
-    margin: 10px;
-    padding: 12px 24px;
-    border-radius: 6px;
-    background: #28a745;
-    color: var(--color-text-light);
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 5px;
-}
-
-#language-select button:hover {
-    background: #218838;
-}
-
-/* --- Google Translate and Chatbot (No changes) --- */
+/* --- Google Translate and Chatbot --- */
 #google_translate_element {
     margin: 20px;
     text-align: center;
@@ -636,38 +595,233 @@ footer, footer *, footer[style], footer a[style], footer p[style] {
     transition: opacity 0.5s ease-in-out;
 }
 
-/* --- Chatbot (Styles remain as is, they look fine) --- */
-
 /* --- Media Queries --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     body {
-        padding: 10px;
+        padding: 8px;
+    }
+    header {
+        width: 100vw;
+        max-width: 100vw;
+        border-radius: 0;
+        padding: 12px 4px;
+    }
+    nav {
+        width: 100vw;
+        max-width: 100vw;
+        border-radius: 0;
+        padding: 8px 2px;
+        font-size: 1em;
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+    nav a {
+        margin: 4px 6px;
+        padding: 6px 10px;
+        font-size: 1em;
+        border-radius: 4px;
     }
     .hero-section {
         flex-direction: column;
-        padding: 30px 5%;
+        padding: 18px 2vw 10px 2vw;
         text-align: center;
+        gap: 10px;
     }
     .hero-content {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        max-width: 100vw;
+    }
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .hero-content h2 {
+        font-size: 1.2em;
     }
     .hero-image img {
-        max-width: 100%;
-        margin-top: 20px;
+        max-width: 95vw;
+        margin-top: 10px;
+        height: auto;
+    }
+    .container {
+        padding: 10px 2vw;
+        max-width: 100vw;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    section {
+        margin-bottom: 24px;
+        padding: 0;
+        animation: none;
+    }
+    section h2 {
+        font-size: 1.2em;
+        margin-bottom: 6px;
+    }
+    .solar-img {
+        max-width: 98vw;
+        margin: 6px 0;
+        border-radius: 8px;
     }
     .schemes-container {
         flex-direction: column;
-        gap: 16px;
+        gap: 10px;
+    }
+    .scheme-card {
+        width: 98vw;
+        max-width: 98vw;
+        padding: 10px 4px;
+        border-radius: 8px;
+    }
+    .icon-container img {
+        width: 48px;
+        height: 48px;
     }
     .story-card {
-        padding: 15px;
+        padding: 10px 4px;
+        max-width: 98vw;
+        border-radius: 8px;
     }
-    .solar-img {
-        max-width: 100%;
-        margin: 8px 0;
+    .story-img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 8px;
+    }
+    .benefits-list {
+        max-width: 98vw;
+        font-size: 1em;
+    }
+    .benefit-list li {
+        padding: 10px;
+        margin: 6px 0;
+        border-radius: 6px;
+    }
+    #calculators input,
+    #calculators button {
+        max-width: 98vw;
+        font-size: 1em;
+        padding: 8px;
+    }
+    .form-section input,
+    .form-section button {
+        max-width: 98vw;
+        font-size: 1em;
+        padding: 8px;
     }
     .contact-container {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
+    .contact-info,
+    .contact-form {
+        width: 98vw;
+        max-width: 98vw;
+        margin: 6px 0;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1em;
+        padding: 8px;
+    }
+    .contact-form button {
+        font-size: 1em;
+        padding: 8px;
+    }
+    footer {
+        padding: 10px 2vw;
+        font-size: 0.95em;
+        border-radius: 0;
+        width: 100vw;
+        max-width: 100vw;
+    }
+}
+@media (max-width: 480px) {
+    html {
+        font-size: 15px;
+    }
+    header h1 {
+        font-size: 1.3em;
+    }
+    nav {
+        font-size: 0.98em;
+    }
+    .hero-content h1 {
+        font-size: 1.2em;
+    }
+    .hero-content h2 {
+        font-size: 1em;
+    }
+    .container, .scheme-card, .story-card, .contact-info, .contact-form {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    .benefits-list, .solar-img, .scheme-card, .story-card {
+        max-width: 99vw;
+    }
+}
+
+/* Chatbot styles */
+#chatbot-container #nika-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+#chatbot-container #nika-icon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+#chatbox {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px gold;
+    overflow: hidden;
+    z-index: 10000;
+}
+
+#chatbox .chat-header {
+    background: gold;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    text-align:center;
+}
+
+#chatlog {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    background: #fff9e6;
+}
+
+.chat-input-row {
+    display:flex;
+    border-top:1px solid #ddd;
+}
+
+.chat-input-row input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: none;
+}
+
+.chat-input-row button {
+    background: gold;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
 }
