@@ -2,7 +2,7 @@
 
 **SolarConnect** is a community engagement project built to **spread awareness about solar energy**, promote **government schemes**, share **success stories**, and help users **register for free solar consultations** — empowering communities to move toward sustainable energy adoption.
 
-🌐 **Live Website:** [https://himanshu-jadhav108.github.io/SolarConnect/](https://himanshu-jadhav108.github.io/SolarConnect/)
+🌐 **Live Website:** [SolarConnect](https://himanshu-jadhav108.github.io/SolarConnect/)
 
 ---
 
@@ -74,6 +74,7 @@ SolarConnect/
 ├── index.html          # Main webpage
 ├── styles.css          # Stylesheet
 ├── script.js           # JavaScript + EmailJS integration
+├── chatbot.js          # Chatbot Logic
 ├── images/             # Images, icons, and media
 └── README.md           # Project documentation
 ```
@@ -102,7 +103,7 @@ SolarConnect/
 
 **Himanshu Jadhav**  
 Second-Year Engineering Student (AI & Data Science)  
-[GitHub](https://github.com/himanshu-jadhav108) • [LinkedIn](#) *(add when ready)*  
+[GitHub](https://github.com/himanshu-jadhav108) • [LinkedIn](https://www.linkedin.com/in/himanshu-jadhav-328082339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ) • [Instagram](https://www.instagram.com/himanshu_jadhav_108?igsh=MWYxamppcTBlY3Rl ) • [Portfolio](https://himanshu-jadhav-portfolio.vercel.app/)
 
 ---
 
