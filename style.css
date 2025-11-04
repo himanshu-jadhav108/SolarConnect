@@ -70,8 +70,13 @@ nav {
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
-    position:relative;
+    position:sticky;
+    top:0;
+    width:100%;
     z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px var(--color-shadow);
+    animation: fadeIn 2s ease-in-out;
 }
 nav, #main-nav,
 nav * , #main-nav * {
@@ -88,6 +93,36 @@ nav a * , #main-nav a * {
     opacity: 1 !important;
     visibility: visible !important;
     text-shadow: 0 1px 2px #0006 !important;
+    text-decoration: none;
+    transition: color 0.3s ease, box-shadow 0.3s ease !important;
+
+}
+
+/* ✨ Navbar + Text Glow on Click */
+nav.glow {
+    box-shadow: 0 0 25px 6px yellow;
+}
+
+nav.glow a,
+nav.glow * {
+    color: yellow !important;
+    text-shadow: 0 0 10px yellow, 0 0 20px gold !important;
+}
+
+/* Sticky entrance animation */
+@keyframes stickySlide {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav.sticky {
+    animation: stickySlide 0.4s ease forwards;
 }
 
 /* Google Translate */

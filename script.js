@@ -94,3 +94,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const navbar = document.querySelector('nav');
+const navbarOffset = navbar.offsetTop;
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= navbarOffset) {
+        navbar.classList.add('sticky');
+    } else {
+        navbar.classList.remove('sticky');
+    }
+});
+
+// Glow effect on click
+navbar.addEventListener('click', () => {
+    navbar.classList.add('glow');
+    setTimeout(() => navbar.classList.remove('glow'), 500);
+});
