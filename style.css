@@ -398,25 +398,64 @@ section p {
 #success-stories h2 {
     color: #f9a825;
     font-size: 32px;
-    margin-bottom: 30px;
-    border-bottom: none;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
 }
 
+#success-stories h2::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 4px;
+    background-color: #f9a825;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Story Cards --- */
 .story-card {
     background-color: var(--color-background-light);
     border: 1px solid #fbc02d;
     border-left: 8px solid #fbc02d;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 20px;
+    border-radius: 12px;
+    margin: 25px auto;
+    padding: 25px;
     max-width: 700px;
-    box-shadow: 0 4px 8px var(--color-shadow);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
+    transition: all 0.3s ease;
 }
 
+/* Card Hover - Lift & Shadow Glow */
+.story-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(249, 168, 37, 0.4);
+}
+
+/* --- Image Styling --- */
+.story-img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fbc02d;
+    margin-bottom: 15px;
+    transition: all 0.4s ease;
+}
+
+/* Hover Zoom + Glow Effect */
+.story-img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(255, 221, 51, 0.8);
+    border-color: #ffeb3b;
+}
+
+/* --- Text Styling --- */
 .story-card h3 {
     color: #f57f17;
     margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
 .story-card p {
@@ -425,13 +464,41 @@ section p {
     line-height: 1.6;
 }
 
-.story-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #fbc02d;
-    margin-bottom: 15px;
+/* Text color shift when card is hovered */
+.story-card:hover h3 {
+    color: #f9a825;
+}
+
+/* --- Fade-in Animation when Appears --- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.story-card {
+    animation: fadeUp 0.6s ease forwards;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .story-card {
+        padding: 20px;
+    }
+
+    .story-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    #success-stories h2 {
+        font-size: 28px;
+    }
 }
 
 /* --- Registration Form Section --- */
