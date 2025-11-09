@@ -94,6 +94,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener('click', function (e) {
+  const flip = e.target.closest('.flip-card');
+  if (flip) {
+    flip.classList.toggle('flipped');
+  }
+});
+
 const navbar = document.querySelector('nav');
 const navbarOffset = navbar.offsetTop;
 
