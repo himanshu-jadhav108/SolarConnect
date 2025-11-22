@@ -3,6 +3,7 @@
 **SolarConnect** is a community engagement project built to **spread awareness about solar energy**, promote **government schemes**, share **success stories**, and help users **register for free solar consultations** — empowering communities to move toward sustainable energy adoption.
 
 🌐 **Live Website:** [SolarConnect](https://himanshu-jadhav108.github.io/SolarConnect/)
+🎦 **Youtube Video:** [Youtube Video](https://youtu.be/e0GNXFPpSas?feature=shared )
 
 ---
 
